@@ -1,133 +1,325 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
 body {
-    background-image: url("./images/topography.svg"),
-      linear-gradient(110deg, #f7fcfb, #0d0d0e);
+    background-image: url("./assets/topography.svg"),
+      linear-gradient(110deg, #ffffff, #0f0f0f);
     background-size: 340px, auto;
     min-height: calc(100vh - 100px);
     margin: 50px;
-    /* background: white; */
     background-attachment: fixed;
     letter-spacing: -1px;
+    box-sizing: border-box;
   }
 
 .vline {
     position: fixed;
     top: 0;
-    left: 50%;
+    left: 48%;
     bottom: 15%; top: 15%; margin: 0;
     border: none;
     border-right: solid 1.5px black;
-    z-index: 10;
+    z-index: 0;
+}
+
+.soc1 {
+    position: fixed;
+    top: 76%;
+    left: 17%;
+    height: 30px;
+    width: 30px;
+}
+
+.soc2 {
+    position: fixed;
+    top: 76%;
+    left: 23.6%;
+    height: 30px;
+    width: 30px;
+}
+
+.soc3 {
+    position: fixed;
+    top: 75.2%;
+    left: 29.5%;
+    height: 43px;
+    width: 43px;
 }
 
 h1 {
     position: fixed;
     top: -28%;
-    left: 11%;
+    left: 10%;
     font-size: 450px;
     font-family: 'Jockey One', sans-serif;
     font-weight: 900;
     color: var(--black);
-    text-shadow: 10px 8px 2px rgb(0,0,0,0)
+    text-shadow: 3px 3px 30px #f5f5f5;
 }
 
 h3 {
     position: fixed;
     top: 38%;
-    left: 10.5%;
+    left: 9.5%;
     font-size: 133px;
     font-family: 'Jockey One', sans-serif;
     color:black;
-
+    text-shadow: 3px 3px 30px #f5f5f5;
 }
 
 #context {
     position: fixed;
-    top: 67%;
-    left: 15.6%;
+    top: 68%;
+    left: 14.8%;
     font-size:20px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 .img1 {
     position: fixed;
-    top: 4.5%;
+    top: 3.8%;    
     right: 34.5%;
     height: 225px;
     width: 225px;
+    transition: transform 0.50s ease-in-out;
+}
+
+.img1:hover {
+    -webkit-transform:scale(1.8); 
+    transform:scale(1.8);
+    float: left;
+    padding-top: 45px;
+    padding-right: 5px;
+    z-index: 1;
 }
 
 .img2 {
     position: fixed;
-    top: 4.5%;
+    top: 3.8%;
     right: 17.3%;
-    height: 225.5px;
+    height: 225px;
     width: 275px;
+    transition: transform 0.50s ease-in-out;
 }
 
-/* .img3 {
-    position: fixed;
-    top: 41%;
-    right: 36.05%;
-    height: 400px;
-    width: 200px;
-} */
+.img2:hover {
+    -webkit-transform:scale(1.8); 
+    transform:scale(1.8);
+    float: left;
+    padding-top: 45px;
+    padding-right: 5px;
+    z-index: 1;
+}
 
 .img4 {
     position: fixed;
-    top: 28.5%;
+    top: 28%;
     right: 34.5%;
     height: 325px;
     width: 225px;
+    transition: transform 0.50s ease-in-out;
+}
+
+.img4:hover {
+    -webkit-transform:scale(1.8); 
+    transform:scale(1.8);
+    float: left;
+    padding-top: 25px;
+    padding-right: 5px;
+    z-index: 1;
 }
 
 .img5 {
     position: fixed;
-    top: 4.5%;
+    top: 3.8%;
     right: 3.2%;
-    height: 226px;
+    height: 224.5px;
     width: 225px;
+    transition: transform 0.50s ease-in-out;
+}
+
+.img5:hover {
+    -webkit-transform:scale(1.8); 
+    transform:scale(1.8);
+    float: left;
+    padding-top: 45px;
+    padding-right: 35px;
+    z-index: 1;
 }
 
 .img6 {
     position: fixed;
-    top: 28.5%;
+    top: 28%;
     right: 3.2%;
     height: 325px;
     width: 225px;
+    transition: transform 0.50s ease-in-out;
+}
+
+.img6:hover {
+    -webkit-transform:scale(1.8); 
+    transform:scale(1.8);
+    float: left;
+    padding-top: 25px;
+    padding-right: 35px;
+    z-index: 1;
 }
 
 .img7 {
     position: fixed;
-    top: 28.5%;
+    top: 28%;
     right: 17.3%;
-    height: 227px;
+    height: 200px;
     width: 275px;
+    transition: transform 0.50s ease-in-out;
+}
+
+.img7:hover {
+    -webkit-transform:scale(1.8); 
+    transform:scale(1.8);
+    float: left;
+    padding-top: 15px;
+    padding-right: 5px;
+    z-index: 1;
 }
 
 .img8 {
     position: fixed;
-    top: 63%;
+    top: 62.8%;
     right: 34.5%;
     height: 310px;
     width: 225px;
+    transition: transform 0.50s ease-in-out;
+}
+
+.img8:hover {
+    -webkit-transform:scale(1.8);
+    transform:scale(1.8);
+    float: left;
+    padding-bottom: 230px;
+    padding-right: 5px;
+    z-index: 1;
 }
 
 .img9 {
     position: fixed;
-    top: 63%;
+    top: 62.8%;
     right: 3.2%;
     height: 310px;
     width: 225px;
+    transition: transform 0.50s ease-in-out;
+}
+
+.img9:hover {
+    -webkit-transform:scale(1.8);
+    transform:scale(1.8);
+    float: left;
+    padding-bottom: 230px;
+    padding-right: 35px;
+    z-index: 1;
 }
 
 .img10 {
     position: fixed;
-    top: 52.8%;
+    top: 49.5%;
     right: 17.3%;
-    height: 210px;
+    height: 205px;
     width: 275px;
+    transition: transform 0.50s ease-in-out;
+}
+
+.img10:hover {
+    -webkit-transform:scale(1.8); 
+    transform:scale(1.8);
+    float: left;
+    padding-top: 15px;
+    padding-right: 5px;
+    z-index: 1;
 }
 
 .img11 {
-    
+    position: fixed;
+    top: 71.6%;
+    right: 17.3%;
+    height: 228px;
+    width: 275px;
+    transition: transform 0.50s ease-in-out;
 }
+
+.img11:hover {
+    -webkit-transform:scale(1.8); 
+    transform:scale(1.8);
+    float: left;
+    padding-bottom: 150px;
+    padding-right: 5px;
+    z-index: 1;
+}
+
+
+/* 
+h3:first-of-type { 
+  animation: showup 7s infinite;
+}
+
+p:first-of-type {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+p:last-of-type span {
+  margin-left:-355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+} */
